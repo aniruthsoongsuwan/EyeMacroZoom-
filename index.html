@@ -258,7 +258,7 @@
       </div>
       <div class="badge-meta">
         <h1>เฉพาะใบหน้า & ซูมทะลุดวงตา (Eye Macro Zoom)</h1>
-        <p>ต้นแบบแอนิเมชัน <a href="https://skillry.dev/ai-videos/gemini-4-argon/chetaslua-067496" target="_blank" rel="noopener">chetaslua-067496</a> • หมุนลูกกลิ้งหรือเลื่อนแถบเพื่อซูม</p>
+        <p>หมุนลูกกลิ้งเมาส์หรือเลื่อนแถบควบคุมเพื่อซูมเข้า-ออก</p>
       </div>
     </header>
 
@@ -307,7 +307,7 @@
       };
 
       let activeEye = 'left';
-      let progress = 0;        // 0.0 (1x portrait) -> 1.0 (120x deep inside pupil universe)
+      let progress = 0;        // 0.0 (1x portrait) -> 1.0 (450x deep inside pupil universe)
       let isPlaying = true;
       let direction = 1;       // 1 = zooming in, -1 = zooming out
       let lastTime = performance.now();
@@ -389,9 +389,9 @@
       window.addEventListener('resize', resizeCanvas);
       resizeCanvas();
 
-      // Exponential zoom factor from 1x to 140x
+      // Exponential zoom factor from 1x to 450x to go deeply inside the black pupil
       function getZoomFactor(p) {
-        return Math.pow(140, p);
+        return Math.pow(450, p);
       }
 
       function updateReadout(p) {
